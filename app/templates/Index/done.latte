@@ -1,0 +1,21 @@
+{block content}
+<div class="row">
+	<div class="col-xs-10  col-xs-offset-1">
+		<h1>{$title|noescape}</h1>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-xs-10  col-xs-offset-1">
+		<table class="table">
+			{foreach $data as $single}
+				<tr>
+					<td><img src="{$single["thumbnail"]}" /></td>
+					<td><a href="{$single["youtube"]}" class="btn btn-default">Stáhnout video</a></td>
+					<td><a href="{$single["subtitles"]}" class="btn btn-default">Stáhnout titulky</a></td>
+				</tr>
+			{/foreach}
+		</table>
+	</div>
+</div>

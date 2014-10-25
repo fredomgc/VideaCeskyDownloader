@@ -1,0 +1,8 @@
+body {
+  padding-top: 70px;
+}
+
+table td {
+	vertical-align: middle !important;
+	height: 100px;
+}

@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="alert alert-danger alert-dismissable" n:if="count($bad)>0">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		{foreach $bad as $one }
+			<ul>
+				<li>{$one}</li> 
+			</ul>
+		{/foreach} 
+	</div>
+	
+	<div class="alert alert alert-info alert-dismissable" n:if="count($info)>0">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		{foreach $info as $one }
+			<ul>
+				<li>{$one}</li> 
+			</ul>
+		{/foreach} 
+	</div>
+	
+	<div class="alert alert-success alert-dismissable" n:if="count($good)>0">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		{foreach $good as $one }
+			<ul>
+				<li>{$one}</li> 
+			</ul>
+		{/foreach} 
+	</div>	
+</div>
