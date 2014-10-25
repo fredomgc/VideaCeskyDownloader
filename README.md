@@ -7,11 +7,11 @@ Na úvodní stránce vyplníte URL videa, které se nachází přímo na webu Vi
 
 ## Použití
 Jedná se o webovou aplikaci napsanou v PHP, která používá framework Nette. K interpretaci PHP budete potřebovat webový server Apache.
-1. Nainstalujte Apache
-2. V kořenové složce Apache vytvořte libovolnou složku **foo**, a do ní zkopírujte celý obsah repozitáře
-3. Ve webovém prohlížeči načtěte 127.0.0.1/**foo**
-4. Pokud se zobrazí chyba, nastavte práva zápisu složkám **temp** a **log**
-5. Hotovo, můžete začít aplikaci používat
+- Nainstalujte Apache
+- V kořenové složce Apache vytvořte libovolnou složku **foo**, a do ní zkopírujte celý obsah repozitáře
+- Ve webovém prohlížeči načtěte 127.0.0.1/**foo**
+- Pokud se zobrazí chyba, nastavte práva zápisu složkám **temp** a **log**
+- Hotovo, můžete začít aplikaci používat
 
 ## Co to umí
 - Podporuje příspěvky s jedním nebo několika videi
