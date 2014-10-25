@@ -5,7 +5,7 @@ Jednoduchá, ale robustní aplikace na stahování videí a titulků z webu Vide
 ## Použití
 Na úvodní stránce vyplníte URL videa, které se nachází přímo na webu VideaČesky. Aplikace následně připraví přímý odkaz ke stažení videa z YouTube a přidá i odkaz na titulky.
 
-## Použití
+## Instalace
 Jedná se o webovou aplikaci napsanou v PHP, která používá framework Nette. K interpretaci PHP budete potřebovat webový server Apache.
 - Nainstalujte Apache
 - V kořenové složce Apache vytvořte libovolnou složku **foo**, a do ní zkopírujte celý obsah repozitáře
