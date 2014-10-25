@@ -1,14 +1,14 @@
 <?php
-// source: /var/www/vcDownloader/app/templates/@layout.latte
+// source: /var/www/VideaCeskyDownloader/app/templates/@layout.latte
 
 // prolog Latte\Macros\CoreMacros
-list($_b, $_g, $_l) = $template->initialize('4691533495', 'html')
+list($_b, $_g, $_l) = $template->initialize('7341368128', 'html')
 ;
 // prolog Latte\Macros\BlockMacros
 //
 // block content
 //
-if (!function_exists($_b->blocks['content'][] = '_lb532ded8e0b_content')) { function _lb532ded8e0b_content($_b, $_args) { foreach ($_args as $__k => $__v) $$__k = $__v
+if (!function_exists($_b->blocks['content'][] = '_lb8d4e6c2775_content')) { function _lb8d4e6c2775_content($_b, $_args) { foreach ($_args as $__k => $__v) $$__k = $__v
 ?>		</div><!-- /.container -->
 	</body>
 </html>
@@ -68,12 +68,18 @@ if (empty($_l->extends) && !empty($_control->snippetMode)) {
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo Latte\Runtime\Filters::escapeHtml($_control->link("Index:"), ENT_COMPAT) ?>
+					<a class="navbar-brand" href="<?php echo Latte\Runtime\Filters::escapeHtml($_control->link("Start:"), ENT_COMPAT) ?>
 ">Stahování z VideaČesky.cz</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-											</ul>
+												<li><a <?php try { $_presenter->link("Start:bookmarklet"); } catch (Nette\Application\UI\InvalidLinkException $e) {}; if ($_presenter->getLastCreatedRequestFlag("current")) { ?>
+class="active"<?php } ?> href="<?php echo Latte\Runtime\Filters::escapeHtml($_control->link("Start:bookmarklet"), ENT_COMPAT) ?>
+">Bookmarklet</a></li>
+						<li><a <?php try { $_presenter->link("Start:report"); } catch (Nette\Application\UI\InvalidLinkException $e) {}; if ($_presenter->getLastCreatedRequestFlag("current")) { ?>
+class="active"<?php } ?> href="<?php echo Latte\Runtime\Filters::escapeHtml($_control->link("Start:report"), ENT_COMPAT) ?>
+">Nahlásit chybu nebo chybějící funkci</a></li>
+					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>

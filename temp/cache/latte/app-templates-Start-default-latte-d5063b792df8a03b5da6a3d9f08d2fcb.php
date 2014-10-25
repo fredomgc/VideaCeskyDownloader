@@ -1,14 +1,14 @@
 <?php
-// source: /var/www/vcDownloader/app/templates/Index/default.latte
+// source: /var/www/VideaCeskyDownloader/app/templates/Start/default.latte
 
 // prolog Latte\Macros\CoreMacros
-list($_b, $_g, $_l) = $template->initialize('2492340652', 'html')
+list($_b, $_g, $_l) = $template->initialize('2042552106', 'html')
 ;
 // prolog Latte\Macros\BlockMacros
 //
 // block content
 //
-if (!function_exists($_b->blocks['content'][] = '_lb79d3236196_content')) { function _lb79d3236196_content($_b, $_args) { foreach ($_args as $__k => $__v) $$__k = $__v
+if (!function_exists($_b->blocks['content'][] = '_lbe95acbad6a_content')) { function _lbe95acbad6a_content($_b, $_args) { foreach ($_args as $__k => $__v) $$__k = $__v
 ?><div class="row">
 	<div class="col-xs-10  col-xs-offset-1">
 		<h1>Stahování z VideaČesky.cz</h1>

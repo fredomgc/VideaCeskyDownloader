@@ -10,7 +10,7 @@ class VideaCeskyDecoder extends Nette\Object {
 
     public function __construct($url) {
         $this->url = $url;
-        $this->html = file_get_contents($this->url);
+        $this->html = @file_get_contents($this->url);
     }
 
     /**

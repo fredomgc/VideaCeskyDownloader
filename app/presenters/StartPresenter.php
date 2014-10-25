@@ -5,22 +5,13 @@ namespace App\Presenters;
 use Nette,
     App\Model;
 
-class IndexPresenter extends BasePresenter {
-
-    public function actionDone() {
-        
-    }
+class StartPresenter extends BasePresenter {
 
     public function actionDefault() {
-
-        //$d = new \YouTubeDownloader("K6m40W1s0Wc");
-        //$d->decode();
-        //$this->template->test = $d->decode();
-        //$this->doMagic("www.youtubeinmp4.com/youtube.php?video=http://www.youtube.com/watch?v=QplQL5eAxlY");
-        //$this->setView("done");
-//$this->redirect("done");
-        //dump($this->link("done"));
-//$this->flashMessage("aaaa");
+        $url = $this->getParameter("url");
+        if ($url != NULL && \Nette\Utils\Validators::isUrl($url)) {
+            $this->doDecode($url);
+        }
     }
 
     public function createComponentUrlForm() {
@@ -32,10 +23,15 @@ class IndexPresenter extends BasePresenter {
     }
 
     public function doUrl(\App\UrlForm $f) {
+
         $done = array();
         $data = $f->getValues();
 
-        $decoder = new \VideaCeskyDecoder($data->url);
+        $this->doDecode($data->url);
+    }
+
+    private function doDecode($url) {
+        $decoder = new \VideaCeskyDecoder($url);
         $data = $decoder->decode();
 
         if (!is_array($data)) {
@@ -62,7 +58,7 @@ class IndexPresenter extends BasePresenter {
 
     function doError() {
         $this->flashMessage("Na zadané stránce se nepodařilo nalézt žádná videa ke stažení. Pokud věříte, že jde o chybu, nahlaste ji prosím.", \App\FlashMessages::BAD);
-        $this->redirect("Index:");
+        $this->redirect("Start:");
     }
 
 }

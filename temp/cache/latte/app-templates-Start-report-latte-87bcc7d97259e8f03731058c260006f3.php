@@ -1,32 +1,25 @@
 <?php
-// source: /var/www/vcDownloader/app/templates/Index/done.latte
+// source: /var/www/VideaCeskyDownloader/app/templates/Start/report.latte
 
 // prolog Latte\Macros\CoreMacros
-list($_b, $_g, $_l) = $template->initialize('9578222451', 'html')
+list($_b, $_g, $_l) = $template->initialize('5202196088', 'html')
 ;
 // prolog Latte\Macros\BlockMacros
 //
 // block content
 //
-if (!function_exists($_b->blocks['content'][] = '_lba0bee3d340_content')) { function _lba0bee3d340_content($_b, $_args) { foreach ($_args as $__k => $__v) $$__k = $__v
+if (!function_exists($_b->blocks['content'][] = '_lb644dabe811_content')) { function _lb644dabe811_content($_b, $_args) { foreach ($_args as $__k => $__v) $$__k = $__v
 ?><div class="row">
 	<div class="col-xs-10  col-xs-offset-1">
-		<h1><?php echo $title ?></h1>
+		<h1>Nahlášení chyby nebo chybějící funkce</h1>
 	</div>
 </div>
 
 
 <div class="row">
 	<div class="col-xs-10  col-xs-offset-1">
-		<table class="table">
-<?php $iterations = 0; foreach ($data as $single) { ?>
-				<tr>
-					<td><img src="<?php echo Latte\Runtime\Filters::escapeHtml(Latte\Runtime\Filters::safeUrl($single["thumbnail"]), ENT_COMPAT) ?>"></td>
-					<td><a href="<?php echo Latte\Runtime\Filters::escapeHtml(Latte\Runtime\Filters::safeUrl($single["youtube"]), ENT_COMPAT) ?>" class="btn btn-default">Stáhnout video</a></td>
-					<td><a href="<?php echo Latte\Runtime\Filters::escapeHtml(Latte\Runtime\Filters::safeUrl($single["subtitles"]), ENT_COMPAT) ?>" class="btn btn-default">Stáhnout titulky</a></td>
-				</tr>
-<?php $iterations++; } ?>
-		</table>
+		<p>Něco nefunguje? Chybí vám zde nějaká funkce? Prosím, neostýchejte se mi problém nahlásit. Učinit tak můžete poholdně přímo na GitHubu, na kterém je tento projekt veden.</p>
+		<p><a href="https://github.com/fredomgc/VideaCeskyDownloader/issues" class="btn btn-default">Nahlásit chybu nebo chybějící funkci</a></p>
 	</div>
 </div>
 <?php

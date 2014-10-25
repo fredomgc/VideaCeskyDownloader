@@ -1,8 +1,8 @@
 <?php
-// source: /var/www/vcDownloader/app/components/FlashMessages/FlashMessages.latte
+// source: /var/www/VideaCeskyDownloader/app/components/FlashMessages/FlashMessages.latte
 
 // prolog Latte\Macros\CoreMacros
-list($_b, $_g, $_l) = $template->initialize('2015318757', 'html')
+list($_b, $_g, $_l) = $template->initialize('8482952717', 'html')
 ;
 // prolog Nette\Bridges\ApplicationLatte\UIMacros
 
