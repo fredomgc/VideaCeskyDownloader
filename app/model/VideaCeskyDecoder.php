@@ -119,6 +119,15 @@ class VideaCeskyDecoder extends Nette\Object {
         return $return;
     }
 
+    private function findYouTubeId($url) {
+        preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $url, $matches);
+
+        if (isset($matches[0]))
+            return $matches[0];
+        else
+            return FALSE;
+    }
+
     private function decodePlaylist($tags) {
         foreach ($tags as $tag) {
             $flashvars = $tag->flashvars;
