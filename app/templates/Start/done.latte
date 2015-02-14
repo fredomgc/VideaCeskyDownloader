@@ -11,7 +11,7 @@
 		<table class="table">
 			{foreach $data as $single}
 				<tr>
-					<td><img src="{$single["thumbnail"]}" /></td>
+					<td n:if="$single['thumbnail']"><img src="{$single["thumbnail"]}" /></td>
 					<td><a href="{$single["youtube"]}" class="btn btn-default">Stáhnout video</a></td>
 					<td><a href="{$single["subtitles"]}" class="btn btn-default">Stáhnout titulky</a></td>
 				</tr>

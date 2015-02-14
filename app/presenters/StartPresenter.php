@@ -33,19 +33,21 @@ class StartPresenter extends BasePresenter {
     private function doDecode($url) {
         $decoder = new \VideaCeskyDecoder($url);
         $data = $decoder->decode();
-
+        $done = array();
+        
         if (!is_array($data)) {
             $this->doError();
         }
-        foreach ($data as $single) {
-            $youtube = new \YouTubeDownloader($single["youtube"]);
-            $video = $youtube->decode();
 
+        foreach ($data as $single) {
+            $youtube = new \YouTubeFetcher($single["youtube"]);
+            $video = $youtube->decode();
+            
             if ($video != FALSE) {
                 $done[] = array("youtube" => $video["link"], "subtitles" => $single["subtitles"], "thumbnail" => $video["thumbnail"]);
             }
         }
-
+        
         $this->template->title = $decoder->getPostName();
         $this->template->data = $done;
 

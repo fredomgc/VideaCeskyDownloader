@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Stahování YouTube videa pomocí keepvid.com
+ * @deprecated Patrně již nebude fungovat (?)
+ */
 class YouTubeDownloader extends \Nette\Object {
 
     /** @var string */

@@ -79,7 +79,7 @@ class VideaCeskyDecoder extends Nette\Object {
                 continue; //toto nevalidni video preskocit
 
             $id = $matches[0];
-
+            
             /**
              * Subtitles
              */
